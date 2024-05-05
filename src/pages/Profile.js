@@ -136,17 +136,6 @@ const Profile = () => {
             />
             </div>
           </div>
-          {/* <div className="mb-3 row">
-            <input
-              type="password"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              className="form-control"
-              id="ProfilePassword"
-              placeholder="Password"
-              //required
-            />
-          </div> */}
           <div className="mb-3 row">
             <label htmlFor="ProfilePhone" className=" profile-label col-md-2">
                 Phone
@@ -242,7 +231,6 @@ const Profile = () => {
                 className="form-control"
                 id="Address-PostalCode"
                 placeholder="Postal Code"
-                //required
                 />
                 </div>
             </div>
