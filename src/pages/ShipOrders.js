@@ -95,7 +95,7 @@ const ShipOrders = () => {
           </div>
         </div>
   
-        {data?.map( (OrderObj,index) => {
+        {data?.toReversed().map( (OrderObj,index) => {
   
           console.log("product:wvewv");
   
@@ -106,7 +106,25 @@ const ShipOrders = () => {
           </div>
   
           <div className="col-md-1 row-text col-half">
-            <p className="shipOrder-orderDate"> 12-03-42 {OrderObj.order.date} </p>
+            <p className="shipOrder-orderDate"> {(()=>{
+
+              // let dateObj = OrderObj.order.exp_delivery_date;
+              // let date = dateObj.slice(-2);
+              // date = date-5;
+
+              var dateString = OrderObj.order.exp_delivery_date; // Example date string
+
+              // Parse the date string into a Date object
+              var date = new Date(dateString);
+
+              // Subtract 5 days from the date
+              date.setDate(date.getDate() - 5);
+
+              // Format the result as "yyyy-mm-dd"
+              var formattedDate = date.toISOString().split('T')[0];
+
+              return formattedDate;
+            })() } </p>
           </div>
   
           <div className="col-md-3 row-text">
