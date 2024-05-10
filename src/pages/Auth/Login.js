@@ -22,7 +22,7 @@ const Login = () => {
       headers: {
         "Content-type": "application/json; charset=UTF-8"
       },
-      credentials: 'include'
+      withCredentials:true,
     });
 
     const contentType = await res.headers.get("content-type");
